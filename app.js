@@ -24,7 +24,7 @@ app.use(methodOverride(function (req, res) {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "http://mysql-hands-on-workshop-3.apps.sandbox.alm-ocp.siemens.net",
+  host: "172.27.0.101",
   user: "flo",
   password: "flo",
   port: 3306
