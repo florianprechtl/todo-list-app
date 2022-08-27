@@ -24,14 +24,17 @@ app.use(methodOverride(function (req, res) {
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "127.0.0.1",
+  host: "172.27.1.101",
   user: "flo",
   password: "flo"
 });
 
 con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
+  if (err) {
+    console.log("Not connected!");
+  } else {
+    console.log("Connected!");
+  }
 });
 
 
