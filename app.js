@@ -20,6 +20,20 @@ app.use(methodOverride(function (req, res) {
     }
 }));
 
+/* Connect DB */
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "127.0.0.1",
+  user: "flo",
+  password: "flo"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
 
 let todolist = [];
 
