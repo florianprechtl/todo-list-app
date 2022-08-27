@@ -9,7 +9,7 @@ COPY package*.json ./
 # Install app dependencies
 # RUN npm install
 # For production use
-RUN npm ci --only=production
+RUN npm i --only=production
 
 # Bundle app source
 COPY . .
